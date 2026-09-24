@@ -1,7 +1,6 @@
 {
   "name": "rensa-name-resolver",
   "version": "0.1.0",
-  "private": true,
   "description": "Resolve .rns names in MetaMask on Robinhood Chain Mainnet using Rensa's read-only API",
   "homepage": "https://rensalabs.xyz",
   "repository": {
