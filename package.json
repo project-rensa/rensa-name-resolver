@@ -1,0 +1,37 @@
+{
+  "name": "rensa-name-resolver",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Resolve .rns names in MetaMask on Robinhood Chain Mainnet using Rensa's read-only API",
+  "homepage": "https://rensalabs.xyz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/project-rensa/rensa-name-resolver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/project-rensa/rensa-name-resolver/issues"
+  },
+  "license": "MIT",
+  "main": "dist/bundle.js",
+  "files": ["dist/bundle.js", "images/icon.svg", "snap.manifest.json", "README.md", "PRIVACY.md", "SECURITY.md"],
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests snap.config.ts install/app.js scripts/serve-install.mjs",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "build": "mm-snap build",
+    "manifest:validate": "mm-snap manifest",
+    "eval": "mm-snap eval",
+    "serve:snap": "mm-snap serve --port 8080",
+    "serve:install": "node scripts/serve-install.mjs"
+  },
+  "devDependencies": {
+    "@metamask/snaps-cli": "8.4.1",
+    "@metamask/snaps-sdk": "12.0.1",
+    "@types/node": "22.19.19",
+    "eslint": "9.39.4",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.1"
+  }
+}

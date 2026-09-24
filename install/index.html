@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Install Rensa Name Resolver · Local Flask test</title>
+    <style>
+      :root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; background: #f8f5ef; color: #171815; }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 8% 8%, #eee8df, transparent 38%), #f8f5ef; }
+      header, main { width: min(100% - 40px, 920px); margin-inline: auto; }
+      header { display: flex; align-items: center; gap: 10px; padding-block: 32px; font-weight: 800; letter-spacing: -.04em; }
+      header img { width: 30px; height: 30px; object-fit: contain; }
+      main { padding-block: 80px 120px; }
+      .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #5d6758; }
+      h1 { max-width: 720px; margin: 24px 0; font-size: clamp(48px, 8vw, 96px); line-height: .96; letter-spacing: -.075em; }
+      p { max-width: 620px; line-height: 1.65; color: #50534b; }
+      .panel { margin-top: 50px; padding: 32px; background: #fffdf8; border: 1px solid #e3ddd4; border-radius: 16px; box-shadow: 0 24px 60px #1b1d1912; }
+      .panel h2 { margin-top: 0; font-size: 26px; letter-spacing: -.045em; }
+      button { appearance: none; border: 0; border-radius: 8px; padding: 13px 18px; background: #171815; color: white; font: inherit; font-weight: 700; cursor: pointer; }
+      button:disabled { opacity: .55; cursor: not-allowed; }
+      #status { min-height: 26px; margin-top: 20px; font-size: 14px; }
+      code { background: #f2eee7; padding: 3px 6px; border-radius: 4px; color: #252923; }
+      .fine { font-size: 13px; color: #74776f; }
+    </style>
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header><img src="/rensa-mark-ink.png" alt="" aria-hidden="true">Rensa</header>
+    <main>
+      <div class="eyebrow">Local developer test · MetaMask Flask</div>
+      <h1>Your .rns name, inside MetaMask.</h1>
+      <p>Install the local, read-only Rensa Name Resolver to preview .rns resolution in MetaMask recipient fields on Robinhood Chain Mainnet.</p>
+      <section class="panel" aria-labelledby="install-title">
+        <h2 id="install-title">Connect the resolver</h2>
+        <p>Use a separate Flask browser profile with no funded account. This page only requests Snap installation; it does not request accounts, sign, or submit transactions.</p>
+        <button type="button" id="install" disabled>Install local Rensa resolver</button>
+        <div id="status" role="status" aria-live="polite">Looking for MetaMask Flask…</div>
+        <p class="fine">After installation, select Robinhood Chain Mainnet (4663), open MetaMask Send, and type <code>rensa.rns</code>. Confirm the resolved address, then close Send without submitting.</p>
+      </section>
+    </main>
+  </body>
+</html>
